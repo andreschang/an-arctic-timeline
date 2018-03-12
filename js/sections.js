@@ -3,26 +3,24 @@ function detectIE() {
 
     var msie = ua.indexOf('MSIE ');
     if (msie > 0) {
-        // IE 10 or older => return version number
-        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+        return true;
     }
 
     var trident = ua.indexOf('Trident/');
     if (trident > 0) {
-        // IE 11 => return version number
         var rv = ua.indexOf('rv:');
-        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+        return true;
     }
 
     var edge = ua.indexOf('Edge/');
     if (edge > 0) {
-       // Edge (IE 12+) => return version number
-       return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+       return true;
     }
-
     // other browser
     return false;
 }
+
+console.log(detectIE())
 
 if ( detectIE() == true ) {
   $('#noIE').css('opacity', '1');
@@ -285,13 +283,13 @@ var scrollVis = function () {
       .attr('x', function(d,i) {var qEnd = d3.select('#qEnd'+d.slide);
         var arrowX0 = qEnd.node().getBoundingClientRect().right-340;
         var arrowX = arrowX0 <= 370 ? arrowX0 : 1;
-        console.log("arrowx "+arrowX);
+        // console.log("arrowx "+arrowX);
         return arrowX})
       .attr('y', function(d,i) {var qEnd = d3.select('#qEnd'+d.slide);
         var arrowX0 = qEnd.node().getBoundingClientRect().right-340;
         var arrowY0 = qEnd.node().getBoundingClientRect().bottom-8;
         var arrowY = arrowX0 <= 370 ? arrowY0 : arrowY0+36;
-        console.log("arrowy "+arrowY);
+        // console.log("arrowy "+arrowY);
         return arrowY})
       .on("click", function(d, i){
         var sClass = '.slide'+d.slide;
@@ -477,7 +475,6 @@ var scrollVis = function () {
    */
   panelGroup.update = function (index, progress) {
     updateFunctions[index](progress);
-    // console.log(progress)
   };
 
   // return chart function
@@ -516,9 +513,9 @@ function display(data) {
   });
 
 
-  for (i = 0; i < 16; i++) {
-    console.log($('.arrow')[i].getBoundingClientRect())
-  }
+  // for (i = 0; i < 16; i++) {
+  //   console.log($('.arrow')[i].getBoundingClientRect())
+  // }
 
   scroll.on('progress', function (index, progress) {
     plot.update(index, progress);
