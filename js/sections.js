@@ -339,6 +339,7 @@ var scrollVis = function () {
         g.selectAll(sClass).filter('.fRead')
           .transition()
           .duration(200)
+          .attr('pointer-events', 'all')
           .style('opacity', 1);})
       .on("mouseover", linkMouseOver)
       .on("mouseout", linkMouseOut)
@@ -354,13 +355,13 @@ var scrollVis = function () {
     g.selectAll('.slide6').filter('.eventYear').text('Late 1800s');
     g.selectAll('.slide8').filter('.eventYear').text('Early 1800s');
     g.selectAll('.slide9').filter('.eventYear').text('1500-1800');
-    g.selectAll('.slide9,.slide15').filter('.fReadArrow').attr('y', 642);
+    g.selectAll('.slide9,.slide15,.slide14').filter('.fReadArrow').attr('y', 642);
     g.selectAll('.slide10').filter('.eventYear').text('1300-1850');
     g.selectAll('.slide0').filter('.arrow').remove()
     g.selectAll('.slide13').filter('.eventYear').text('3,000 BC');
     g.selectAll('.slide13').filter('.fReadArrow').remove();
     g.selectAll('.slide14').filter('.eventYear').text('5,000 BC');
-    g.selectAll('.slide14').filter('.fReadArrow').attr('y', 538);
+    // g.selectAll('.slide14').filter('.fReadArrow').attr('y', 538);
     g.selectAll('.slide15').filter('.eventYear').text('11,000-9,500 BC');
     g.selectAll('.slide16').filter('.eventYear').text('22,000 BC');
     g.selectAll('.slide17').filter('.eventYear').text('130,000-115,000 BC');
@@ -369,6 +370,8 @@ var scrollVis = function () {
 
     if (mobile > docWindow) {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-45)');
+      g.selectAll('.slide12').filter('.arrow').attr('transform', 'translate(0,36)')
+      g.selectAll('.slide12').filter('.arrow').attr('x', 1)
     } else {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-80)');
     }
@@ -444,30 +447,30 @@ var scrollVis = function () {
     }};
 
 
-  var wrap = function(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        // dy = parseFloat(text.attr("dy")),
-        dy = 0,
-        tspan = text.text(null).append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
-}
+//   var wrap = function(text, width) {
+//   text.each(function() {
+//     var text = d3.select(this),
+//         words = text.text().split(/\s+/).reverse(),
+//         word,
+//         line = [],
+//         lineNumber = 0,
+//         lineHeight = 1.1, // ems
+//         y = text.attr("y"),
+//         // dy = parseFloat(text.attr("dy")),
+//         dy = 0,
+//         tspan = text.text(null).append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", dy + "em");
+//     while (word = words.pop()) {
+//       line.push(word);
+//       tspan.text(line.join(" "));
+//       if (tspan.node().getComputedTextLength() > width) {
+//         line.pop();
+//         tspan.text(line.join(" "));
+//         line = [word];
+//         tspan = text.append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+//       }
+//     }
+//   });
+// }
 
   panelGroup.activate = function (index) {
     activeIndex = index;
