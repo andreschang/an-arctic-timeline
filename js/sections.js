@@ -559,7 +559,7 @@ function display(data) {
 }
 
 // load data and display
-d3.tsv('web_timeline.5.0.tsv', display);
+d3.tsv('timeline.5.0.tsv', display);
 
 });
 }
