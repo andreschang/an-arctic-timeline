@@ -179,7 +179,7 @@ var scrollVis = function () {
       .attr('x', width / 3)
       .text(function(d) {return d.title})
       // .call(wrap, 400)
-      .call(wrap, 450)
+      .call(wrap, 400)
       .style('opacity', 0);
 
 
@@ -270,12 +270,12 @@ var scrollVis = function () {
       .append('foreignObject')
         .attr('y', (height / 2.42)+250)
         .attr("width", 510)
-        .attr("height", 300)
+        .attr("height", 500)
         .attr('class', function(d, i) {return 'slide'+i+' quote'})
         .style('opacity', 0)
       .append('xhtml:div')
         .html(function(d) {return d.quote});
-        // .html(function(d) {return d.mobilequote});
+        // .html(function(d) {return d.mobileQuote});
     }
 
 
