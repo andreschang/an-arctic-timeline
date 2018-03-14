@@ -178,7 +178,7 @@ var scrollVis = function () {
       .enter()
       .append('foreignObject')
         // .attr('y', (height / 2.42)+100)
-        .attr('y', (height / 5)+140)
+        .attr('y', (height / 5)+150)
         .attr('x', 0)
         .attr("width", 400)
         .attr("height", 300)
@@ -370,8 +370,8 @@ var scrollVis = function () {
 
     if (mobile > docWindow) {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-45)');
-      g.selectAll('.slide12').filter('.arrow').attr('transform', 'translate(0,36)')
-      g.selectAll('.slide12').filter('.arrow').attr('x', 1)
+      // g.selectAll('.slide12').filter('.arrow').attr('transform', 'translate(0,36)')
+      // g.selectAll('.slide12').filter('.arrow').attr('x', 1)
     } else {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-80)');
     }
