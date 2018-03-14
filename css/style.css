@@ -109,11 +109,11 @@
 #sections {
   position: relative;
   display: inline-block;
-  width: 260px;
+  width: 255px;
   top: 30px;
   z-index: 90;
   padding-bottom: 200px;
-  padding-right: 20px;
+  padding-right: 25px;
   /*opacity: .5;*/
   /*background: #a4abb5;*/
 }
@@ -150,6 +150,7 @@
 #vis .title {
   font-family: Shift;
   font-size:2.8em;
+  line-height: 1.1em;
   /*font-weight: 500;*/
   /*text-anchor: middle;*/
 }
@@ -199,7 +200,7 @@
 #bylineLink {
   color: inherit;
   text-decoration: inherit;
-  pointer-events: all !important;
+  /*pointer-events: all;*/
 }
 
 .axis path,
@@ -287,6 +288,11 @@
   /* is width and height divided by two */
 }
 
+p {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 @media(max-width:480px)  {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   navItemWrap {
@@ -312,6 +318,7 @@
   }
     .quote foreignObject {
     font-size: 2.5em !important;
+    line-height: 1.75em !important;
     overflow: inherit;
   }
 

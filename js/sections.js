@@ -295,7 +295,9 @@ var scrollVis = function () {
           .transition()
           .duration(200)
           .attr('pointer-events', 'all')
-          .style('opacity', 1);})
+          .style('opacity', 1);
+        g.selectAll(sClass).filter('.fReadArrow')
+          .attr('cursor', 'pointer');})
       .on("mouseover", linkMouseOver)
       .on("mouseout", linkMouseOut)
       .attr('width', 140)
@@ -331,6 +333,7 @@ var scrollVis = function () {
 
     // Custom slide edits
     g.selectAll('.slide0').filter('.eventYear,.arrow').remove();
+    g.selectAll('.slide0').filter('.quote').attr('pointer-events', 'all');
     g.selectAll('.slide2').filter('.eventYear').text('2000s');
     g.selectAll('.slide4').filter('.desc').attr('height', 328);
     g.selectAll('.slide6').filter('.eventYear').text('Late 1800s');
@@ -351,10 +354,22 @@ var scrollVis = function () {
 
     if (mobile > docWindow) {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-45)');
+      g.selectAll('.slide9').filter('.desc').attr('transform', 'translate(0,-25)')
+        .attr('height', 330);
+      g.selectAll('.slide12').filter('.desc').attr('transform', 'translate(0,-25)')
+      .attr('height', 330);
+      g.selectAll('.slide13').filter('.desc').attr('transform', 'translate(0,-25)')
+      .attr('height', 350);
+      g.selectAll('.slide15').filter('.desc').attr('transform', 'translate(0,-50)')
+      .attr('height', 355);
+      g.selectAll('.slide19').filter('.desc,.quote,.arrow').attr('transform', 'translate(0,10)');
+      g.selectAll('.slide14').filter('.fReadArrow').attr('transform', 'translate(0,-80)');
+      g.selectAll('.slide14').filter('.desc').attr('height', 226);
+
       // g.selectAll('.slide12').filter('.arrow').attr('transform', 'translate(0,36)')
       // g.selectAll('.slide12').filter('.arrow').attr('x', 1)
     } else {
-      g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-80)');
+      g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-25)');
     }
 
     };
