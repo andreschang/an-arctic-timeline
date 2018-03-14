@@ -316,7 +316,7 @@
   }
 
     .title foreignObject {
-      font-size: 5em !important;
+      font-size: 6.5em !important;
       overflow: inherit;
     }
 
@@ -360,11 +360,11 @@
 }
 
 #vis .eventYear {
-  font-size: 2.5em;
+  font-size: 2.1em;
 }
 
 #vis .eventDepth{
-  font-size: 1.9em; }
+  font-size: 1.5em; }
 
 .slide0 div  p{
   font-size: .85em !important;
