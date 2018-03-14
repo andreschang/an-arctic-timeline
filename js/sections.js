@@ -165,7 +165,8 @@ var scrollVis = function () {
       .attr('y',  (height / 5)+100)
       .attr('x', width / 3)
       .text(function(d) {return d.title})
-      .call(wrap, 400)
+      // .call(wrap, 400)
+      .call(wrap, 450)
       .style('opacity', 0);
       } else {
 
@@ -177,7 +178,8 @@ var scrollVis = function () {
       .attr('y',  (height / 5)+200)
       .attr('x', width / 3)
       .text(function(d) {return d.title})
-      .call(wrap, 400)
+      // .call(wrap, 400)
+      .call(wrap, 450)
       .style('opacity', 0);
 
 
@@ -238,13 +240,15 @@ var scrollVis = function () {
       .data(timelineData)
       .enter()
       .append('foreignObject')
+        // .attr('y', (height / 2.42)+100)
         .attr('y', (height / 2.42)+100)
         .attr("width", 510)
         .attr("height", 330)
         .attr('class', function(d, i) {return 'slide'+i+' quote'})
         .style('opacity', 0)
       .append('xhtml:div')
-        .html(function(d) {return '<p>'+d.quote+"</p>"});
+        // .html(function(d) {return '<p>'+d.quote+"</p>"});
+        .html(function(d) {return d.quote});
 
 
     } else {
@@ -270,7 +274,8 @@ var scrollVis = function () {
         .attr('class', function(d, i) {return 'slide'+i+' quote'})
         .style('opacity', 0)
       .append('xhtml:div')
-        .html(function(d) {return '<p>'+d.quote+"</p>"});
+        // .html(function(d) {return '<p>'+d.quote+"</p>"});
+        .html(function(d) {return d.mobilequote});
     }
 
 
