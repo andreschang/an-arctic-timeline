@@ -252,8 +252,8 @@ var scrollVis = function () {
         .attr('class', function(d, i) {return 'slide'+i+' quote'})
         .style('opacity', 0)
       .append('xhtml:div')
-        // .html(function(d) {return '<p>'+d.quote+"</p>"});
-        .html(function(d) {return d.quote});
+        .html(function(d) {return '<p>'+d.quote+'</p>'});
+        // .html(function(d) {return d.quote});
 
 
     } else {
@@ -281,8 +281,8 @@ var scrollVis = function () {
         .attr('class', function(d, i) {return 'slide'+i+' quote'})
         .style('opacity', 0)
       .append('xhtml:div')
-        .html(function(d) {return d.quote});
-        // .html(function(d) {return d.mobileQuote});
+        // .html(function(d) {return d.quote});
+        .html(function(d) {return '<p>'+d.mobileQuote+'</p>'});
     }
 
 
