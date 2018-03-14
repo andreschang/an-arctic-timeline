@@ -316,7 +316,7 @@
   }
 
     .title foreignObject {
-      font-size: 3.5em !important;
+      font-size: 5em !important;
       overflow: inherit;
     }
 
@@ -328,11 +328,6 @@
     #vis .arrow {
      fill: rgba(255, 255, 255, 0);
      pointer-events: none;
-    }
-
-    foreignObject div  p {
-      width: 400px;
-      font-size: .9em;
     }
 
     #navBar {
@@ -365,11 +360,11 @@
 }
 
 #vis .eventYear {
-  font-size: 2.7em;
+  font-size: 2.5em;
 }
 
 #vis .eventDepth{
-  font-size: 2.1em; }
+  font-size: 1.9em; }
 
 .slide0 div  p{
   font-size: .85em !important;
