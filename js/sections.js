@@ -157,30 +157,59 @@ var scrollVis = function () {
         return( showYear );})
       .style('opacity', 0);
 
-    g.append('g').selectAll('title')
+    // g.append('g').selectAll('title')
+    //   .data(timelineData)
+    //   .enter()
+    //   .append('text')
+    //   .attr('class', function(d, i) {return 'slide'+i+' title'})
+    //   .attr('y',  (height / 5)+100)
+    //   .attr('x', width / 3)
+    //   .text(function(d) {return d.title})
+    //   // .call(wrap, 400)
+    //   .call(wrap, 450)
+    //   .style('opacity', 0);
+
+     g.append('g').selectAll('title')
       .data(timelineData)
       .enter()
-      .append('text')
-      .attr('class', function(d, i) {return 'slide'+i+' title'})
-      .attr('y',  (height / 5)+100)
-      .attr('x', width / 3)
-      .text(function(d) {return d.title})
-      // .call(wrap, 400)
-      .call(wrap, 450)
-      .style('opacity', 0);
+      .append('foreignObject')
+        // .attr('y', (height / 2.42)+100)
+        .attr('y', (height / 5)+60)
+        .attr('x', 0)
+        .attr("width", 450)
+        .attr("height", 300)
+        .attr('class', function(d, i) {return 'slide'+i+' title'})
+        .style('opacity', 0)
+      .append('xhtml:div')
+        .html(function(d) {return d.title});
+
       } else {
 
-       g.append('g').selectAll('title')
+      //  g.append('g').selectAll('title')
+      // .data(timelineData)
+      // .enter()
+      // .append('text')
+      // .attr('class', function(d, i) {return 'slide'+i+' title'})
+      // .attr('y',  (height / 5)+200)
+      // .attr('x', width / 3)
+      // .text(function(d) {return d.title})
+      // // .call(wrap, 400)
+      // .call(wrap, 400)
+      // .style('opacity', 0);
+
+      g.append('g').selectAll('title')
       .data(timelineData)
       .enter()
-      .append('text')
-      .attr('class', function(d, i) {return 'slide'+i+' title'})
-      .attr('y',  (height / 5)+200)
-      .attr('x', width / 3)
-      .text(function(d) {return d.title})
-      // .call(wrap, 400)
-      .call(wrap, 400)
-      .style('opacity', 0);
+      .append('foreignObject')
+        // .attr('y', (height / 2.42)+100)
+        .attr('y', (height / 5)+100)
+        .attr('x', 0)
+        .attr("width", 400)
+        .attr("height", 300)
+        .attr('class', function(d, i) {return 'slide'+i+' title'})
+        .style('opacity', 0)
+      .append('xhtml:div')
+        .html(function(d) {return d.title});
 
 
           g.append('g').selectAll('eventDepth')
