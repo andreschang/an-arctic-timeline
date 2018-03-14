@@ -113,24 +113,8 @@ var scrollVis = function () {
      g.append('g').selectAll('img')
       .data(timelineData.filter(function(d) {return d.imgFile != ''}))
       .enter()
-      .append('svg:a')
-        .attr('xlink:href', function(d) {
-          var file = d.lightBoxFile != '' ? d.lightBoxFile : d.imgFile;
-          return 'images/'+file+'.jpg'})
-        .attr('data-lightbox', function(d) {return 'image #'+d.slide})
-        .attr('data-title', function(d) {return d.imgName+'<br>'+d.imgSource})
       .append('svg:image')
-      .attr('class', function(d, i) {return 'slide'+d.slide+' img'})
-      .attr('xlink:href', function(d,i) {return 'images/'+d.imgFile+'.jpg'})
-      .attr('x', 50)
-      .attr('y', newHeight)
-      .attr('width', function(d, i) {return (width-d.imgX)})
-      .attr('height', function(d, i) { return ((width-(d.imgX))*d.fileHeight/d.fileWidth)})
-      .on("mouseover", imageMouseOver)
-      .on("mouseout", imageMouseOut)
-      .style('opacity', 0);
-
-
+      .attr('class', function(d, i) {return 'slide'+d.slide+' img'});
       }
 
     if(mobile > docWindow) {
@@ -262,11 +246,8 @@ var scrollVis = function () {
       .data(timelineData)
       .enter()
       .append('foreignObject')
-        .attr('y', (height / 2.42)+100)
         .attr('class', function(d, i) {return 'slide'+i+' desc'})
-        .style('opacity', 0)
-      .append('xhtml:div')
-        .html(function(d) {return d.desc});
+        .style('opacity', 0);
 
 
       g.append('g').selectAll('quote')
