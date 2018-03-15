@@ -206,7 +206,7 @@ var scrollVis = function () {
         .attr('class', function(d, i) {return 'slide'+i+' fRead fR'})
         .style('opacity', 0)
       .append('xhtml:div')
-        .html(function(d) {return "<h1>Further Reading</h1>"+d.furtherReading});
+        .html(function(d) {return "<h1>Resources</h1>"+d.furtherReading});
 
     if(mobile > docWindow) {
       g.append('g').selectAll('desc')
@@ -303,7 +303,7 @@ var scrollVis = function () {
       .data(timelineData.filter(function(d) {return d.furtherReading != '' }))
       .enter()
       .append('text')
-      .text('FURTHER READING')
+      .text('RESOURCES')
       .attr('class', function(d) {return 'slide'+d.slide+' fReadArrow fR'})
       .attr('x', 1)
       .attr('y', 638)
