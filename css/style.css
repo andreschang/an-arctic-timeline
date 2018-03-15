@@ -323,12 +323,12 @@ p {
     margin-top: 20px;
   }
     .quote {
-    font-size: 1.2em !important;
+    font-size: 1.4em !important;
     overflow: inherit;
   }
 
     .title {
-      font-size: 2.3em !important;
+      font-size: 2.5em !important;
       overflow: inherit;
     }
 
@@ -381,10 +381,6 @@ p {
 /*.slide0 div  p{
   font-size: .85em !important;
 }*/
-
-.slide0 div br {
-  display: none;
-}
 
 .tick text{
   font-size: 2em;
