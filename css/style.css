@@ -323,12 +323,12 @@ p {
     margin-top: 20px;
   }
     .quote {
-    font-size: 2.1em !important;
+    font-size: 2.3em !important;
     overflow: inherit;
   }
 
     .title {
-      font-size: 3.0em !important;
+      font-size: 3.2em !important;
       overflow: inherit;
     }
 
@@ -372,11 +372,11 @@ p {
 }
 
 #vis .eventYear {
-  font-size: 2.1em;
+  font-size: 2.2em;
 }
 
 #vis .eventDepth{
-  font-size: 1.7em; }
+  font-size: 1.9em; }
 
 /*.slide0 div  p{
   font-size: .85em !important;
