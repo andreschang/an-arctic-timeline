@@ -180,7 +180,7 @@ miniTL.append("rect")
   .attr("fill", "#edf1f2");
 
 // Load data and fill timelines
-d3.tsv("web_timeline.4.8.tsv", function(items) {
+d3.tsv("timeline.5.1.tsv", function(items) {
 
   mainTL.append("g").selectAll("mainEvent")
     .data(items)

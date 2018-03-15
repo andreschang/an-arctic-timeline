@@ -196,8 +196,6 @@ var scrollVis = function () {
       .style('opacity', 0);
       }
 
-
-
     g.append('g').selectAll('fRead')
       .data(timelineData)
       .enter()
@@ -209,8 +207,6 @@ var scrollVis = function () {
         .style('opacity', 0)
       .append('xhtml:div')
         .html(function(d) {return "<h1>Further Reading</h1>"+d.furtherReading});
-
-
 
     if(mobile > docWindow) {
       g.append('g').selectAll('desc')
@@ -238,7 +234,6 @@ var scrollVis = function () {
       .append('xhtml:div')
         .html(function(d) {return '<p>'+d.quote+'</p>'});
         // .html(function(d) {return d.quote});
-
 
     } else {
 
@@ -333,7 +328,6 @@ var scrollVis = function () {
 
     // Custom slide edits
     g.selectAll('.slide0').filter('.eventYear,.arrow').remove();
-    g.selectAll('.slide0').filter('.quote').attr('pointer-events', 'all');
     g.selectAll('.slide2').filter('.eventYear').text('2000s');
     g.selectAll('.slide4').filter('.desc').attr('height', 328);
     g.selectAll('.slide6').filter('.eventYear').text('Late 1800s');
@@ -418,6 +412,10 @@ var scrollVis = function () {
           .duration(600)
           .style('opacity', 0.7);
 
+        if (val == 0) {
+          g.selectAll('.slide0').filter('.quote').attr('pointer-events', 'all');
+        }
+
         // g.selectAll('.slide'+val).filter('.arrow')
         //   .transition()
         //   .duration(600)
@@ -442,31 +440,6 @@ var scrollVis = function () {
           )}
     }};
 
-
-//   var wrap = function(text, width) {
-//   text.each(function() {
-//     var text = d3.select(this),
-//         words = text.text().split(/\s+/).reverse(),
-//         word,
-//         line = [],
-//         lineNumber = 0,
-//         lineHeight = 1.1, // ems
-//         y = text.attr("y"),
-//         // dy = parseFloat(text.attr("dy")),
-//         dy = 0,
-//         tspan = text.text(null).append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", dy + "em");
-//     while (word = words.pop()) {
-//       line.push(word);
-//       tspan.text(line.join(" "));
-//       if (tspan.node().getComputedTextLength() > width) {
-//         line.pop();
-//         tspan.text(line.join(" "));
-//         line = [word];
-//         tspan = text.append("tspan").attr('id', 'headings').attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-//       }
-//     }
-//   });
-// }
 
   panelGroup.activate = function (index) {
     activeIndex = index;
@@ -534,7 +507,7 @@ function display(data) {
 }
 
 // load data and display
-d3.tsv('timeline.5.0.tsv', display);
+d3.tsv('timeline.5.1.tsv', display);
 
 });
 }

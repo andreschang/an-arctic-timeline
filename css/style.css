@@ -291,6 +291,12 @@
 p {
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.fRead p {
+  padding-bottom: 0;
+  margin-bottom: .8em;
 }
 
 @media(max-width:480px)  {
