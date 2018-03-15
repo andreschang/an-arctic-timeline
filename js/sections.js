@@ -162,7 +162,7 @@ var scrollVis = function () {
       .enter()
       .append('foreignObject')
         // .attr('y', (height / 2.42)+100)
-        .attr('y', (height / 5)+150)
+        .attr('y', (height / 5)+175)
         .attr('x', 0)
         .attr("width", 400)
         .attr("height", 300)
