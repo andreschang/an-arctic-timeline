@@ -360,8 +360,8 @@ var scrollVis = function () {
       g.selectAll('.slide14').filter('.fReadArrow').attr('transform', 'translate(0,-80)');
       g.selectAll('.slide14').filter('.desc').attr('height', 226);
 
-      // g.selectAll('.slide12').filter('.arrow').attr('transform', 'translate(0,36)')
-      // g.selectAll('.slide12').filter('.arrow').attr('x', 1)
+      g.selectAll('.slide12').filter('.arrow').attr('y', 466)
+      .attr('x', 1);
     } else {
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-25)');
     }
