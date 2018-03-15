@@ -322,13 +322,13 @@ p {
     font-size: 1.2em;
     margin-top: 20px;
   }
-    .quote foreignObject {
+    .quote {
     font-size: 4.5em !important;
     line-height: 1.75em !important;
     overflow: inherit;
   }
 
-    .title foreignObject {
+    .title {
       font-size: 6.5em !important;
       overflow: inherit;
     }
@@ -379,9 +379,9 @@ p {
 #vis .eventDepth{
   font-size: 1.5em; }
 
-.slide0 div  p{
+/*.slide0 div  p{
   font-size: .85em !important;
-}
+}*/
 
 .slide0 div br {
   display: none;
