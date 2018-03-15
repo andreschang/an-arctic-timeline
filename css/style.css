@@ -323,13 +323,12 @@ p {
     margin-top: 20px;
   }
     .quote {
-    font-size: 4.5em !important;
-    line-height: 1.75em !important;
+    font-size: 1.2em !important;
     overflow: inherit;
   }
 
     .title {
-      font-size: 6.5em !important;
+      font-size: 2.3em !important;
       overflow: inherit;
     }
 
