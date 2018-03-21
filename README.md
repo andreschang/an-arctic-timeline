@@ -2,6 +2,8 @@
 
 Interactive timeline of Arctic history for the [Climate Museum](http://climatemuseum.org)'s first exhibition, [*In Human Time*](http://inhumantime.org). The timeline focuses on three (occasionally overlapping) categories of Arctic events: earth science, human exploration, and culture (art and writing). The timeline is written using D3v4 and makes use of scroller code by [Jim Vallandingham](https://github.com/vlandham/scroll_demo).
 
+The final timeline can be found at [arctictimeline.org](http://arctictimeline.org).
+
 ## Authors
 
 * **Andres Chang** - Design, code, lead research and writing on earth science, additional research and writing on human exploration and culture
