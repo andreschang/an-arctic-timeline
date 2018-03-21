@@ -111,8 +111,8 @@ function scroller() {
       .text(function() {
         var adj = yLoc <= 5460 ? 5 : 86,
           year = miniYearScale((yLoc+adj)),
-          showYear = year >= 0 ? d3.format(".0f")(year) : d3.format(",.0f")(-year)+' BC',
-          showYear2 = year >= -1000000 ? showYear : '1,000,000+ BC',
+          showYear = year >= 0 ? d3.format(".0f")(year) : d3.format(",.0f")(-year)+' BCE',
+          showYear2 = year >= -1000000 ? showYear : '1,000,000+ BCE',
           depth = (year <= 1988 && year >= -237000) ? depthScale((year)) : '1',
           showDepth = depth <= 0 ? ' / '+d3.format(".0f")(depth)+' m' : '';
         return( showYear2+showDepth);

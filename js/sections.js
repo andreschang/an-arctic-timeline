@@ -137,7 +137,7 @@ var scrollVis = function () {
       .attr('class', function(d, i) {return 'slide'+i+' eventYear'})
       .attr('y', (height / 10.8)+100)
       .attr('x', 6)
-      .text(function(d) { var showYear = d.start >= 0 ? d.start : -d.start+' BC';
+      .text(function(d) { var showYear = d.start >= 0 ? d.start : -d.start+' BCE';
         return( showYear );})
       .style('opacity', 0);
 
@@ -191,7 +191,7 @@ var scrollVis = function () {
       .attr('class', function(d, i) {return 'slide'+i+' eventYear'})
       .attr('y', (height / 10.8)+190)
       .attr('x', 0)
-      .text(function(d) { var showYear = d.start >= 0 ? d.start : -d.start+' BC';
+      .text(function(d) { var showYear = d.start >= 0 ? d.start : -d.start+' BCE';
         return( showYear );})
       .style('opacity', 0);
       }
@@ -333,20 +333,20 @@ var scrollVis = function () {
     g.selectAll('.slide6').filter('.eventYear').text('Late 1800s');
     g.selectAll('.slide8').filter('.eventYear').text('Early 1800s');
     g.selectAll('.slide9').filter('.eventYear').text('1500-1800');
-    g.selectAll('.slide9,.slide15,.slide14').filter('.fReadArrow').attr('y', 642);
     g.selectAll('.slide10').filter('.eventYear').text('1300-1850');
     g.selectAll('.slide0').filter('.arrow').remove()
-    g.selectAll('.slide13').filter('.eventYear').text('3,000 BC');
+    g.selectAll('.slide13').filter('.eventYear').text('3,000 BCE');
     g.selectAll('.slide13').filter('.fReadArrow').remove();
-    g.selectAll('.slide14').filter('.eventYear').text('5,000 BC');
+    g.selectAll('.slide14').filter('.eventYear').text('5,000 BCE');
     // g.selectAll('.slide14').filter('.fReadArrow').attr('y', 538);
-    g.selectAll('.slide15').filter('.eventYear').text('11,000-9,500 BC');
-    g.selectAll('.slide16').filter('.eventYear').text('22,000 BC');
-    g.selectAll('.slide17').filter('.eventYear').text('130,000-115,000 BC');
-    g.selectAll('.slide18').filter('.eventYear').text('237,000 BC');
-    g.selectAll('.slide19').filter('.eventYear').text('1,000,000+ BC');
+    g.selectAll('.slide15').filter('.eventYear').text('11,000-9,500 BCE');
+    g.selectAll('.slide16').filter('.eventYear').text('22,000 BCE');
+    g.selectAll('.slide17').filter('.eventYear').text('130,000-115,000 BCE');
+    g.selectAll('.slide18').filter('.eventYear').text('237,000 BCE');
+    g.selectAll('.slide19').filter('.eventYear').text('1,000,000+ BCE');
 
     if (mobile > docWindow) {
+      g.selectAll('.slide9,.slide15,.slide14').filter('.fReadArrow').attr('y', 642);
       g.selectAll('.slide0').filter('.quote').attr('transform', 'translate(0,-45)');
       g.selectAll('.slide9').filter('.desc').attr('transform', 'translate(0,-25)')
         .attr('height', 330);
@@ -357,7 +357,7 @@ var scrollVis = function () {
       g.selectAll('.slide15').filter('.desc').attr('transform', 'translate(0,-50)')
       .attr('height', 355);
       g.selectAll('.slide19').filter('.desc,.quote,.arrow').attr('transform', 'translate(0,10)');
-      g.selectAll('.slide14').filter('.fReadArrow').attr('transform', 'translate(0,-80)');
+      g.selectAll('.slide3,.slide14').filter('.fReadArrow').attr('transform', 'translate(0,-80)');
       g.selectAll('.slide14').filter('.desc').attr('height', 226);
 
       g.selectAll('.slide12').filter('.arrow').attr('y', 466)
@@ -507,7 +507,7 @@ function display(data) {
 }
 
 // load data and display
-d3.tsv('timeline.5.1.tsv', display);
+d3.tsv('timeline.5.2.tsv', display);
 
 });
 }

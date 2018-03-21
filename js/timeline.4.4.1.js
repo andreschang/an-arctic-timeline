@@ -44,13 +44,13 @@ var scale0 = d3.scaleLinear().domain([timeF[0], timeF[1]]).range([scaleDom[0],sc
 var axis0 = d3.axisLeft(scale0).ticks(20, "f"),
   axis1 = d3.axisLeft(scale1).ticks(20, "f"),
   axis2 = d3.axisLeft(scale2).ticks(20, "f")
-    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BC';
+    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BCE';
           return( showYear0 )}),
   axis3 = d3.axisLeft(scale3).ticks(10)
-    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BC';
+    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BCE';
           return( showYear0 )}),
   axis4 = d3.axisLeft(scale4).ticks(10)
-    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BC';
+    .tickFormat(function(d) {var showYear0 = d >= 0 ? d3.format(".0f")(d) : d3.format(",.0f")(-d)+' BCE';
           return( showYear0 )});
 
 // horizontal scaling
@@ -180,7 +180,7 @@ miniTL.append("rect")
   .attr("fill", "#edf1f2");
 
 // Load data and fill timelines
-d3.tsv("timeline.5.1.tsv", function(items) {
+d3.tsv("timeline.5.2.tsv", function(items) {
 
   mainTL.append("g").selectAll("mainEvent")
     .data(items)
